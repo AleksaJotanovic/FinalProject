@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand pb-0">
+  <div class="container-fluid">
+    <p>{{ getRouteUrl() }}</p>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            (click)="previousProduct()"
+            class="nav-link btn btn-sm btn-outline"
+            >{{ "prev" }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <p class="nav-link">|</p>
+        </li>
+        <li class="nav-item">
+          <a (click)="nextProduct()" class="nav-link btn btn-sm btn-outline">{{
+            "next"
+          }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-sm">
+  <div class="row">
+    <div class="col-lg-6 text-lg-center ps-lg-5">
+      <img
+        [src]="product.photo"
+        alt="Product image not loaded..."
+        style="width: 20em; height: 20em"
+        class="ms-lg-5"
+      />
+    </div>
+    <div class="col-lg-6">
+      <h5>{{ product.title }}</h5>
+      <h6>{{ product.price }}$</h6>
+      <p style="font-size: small">{{ product.description }}</p>
+      <hr />
+      <div>
+        <label class="form-label">Quantity</label>
+        <input
+          type="number"
+          min="0"
+          class="form-control form-control-sm shadow-sm rounded-1 mb-2"
+          style="width: 6.2em"
+          [(ngModel)]="product.quantity"
+        />
+        <button
+          type="button"
+          class="btn btn-sm btn-dark rounded-1 mb-5"
+          (click)="addToCart(product); product.quantity = 1"
+        >
+          Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

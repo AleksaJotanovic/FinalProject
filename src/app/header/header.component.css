@@ -1,0 +1,54 @@
+small {
+  text-align: center;
+  font-size: 0.34cm;
+}
+span {
+  font-size: 0.23cm;
+  position: relative;
+  top: -12px;
+  left: -6px;
+}
+.navend-icons {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.navend-icons button {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+i {
+  cursor: pointer;
+  color: rgb(51, 45, 45);
+  transition: color 200ms ease-in-out;
+}
+.navend-icons button:hover i {
+  color: rgb(100, 90, 90);
+}
+
+/* DROP DOWN MENU */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  padding: 2rem 0 2rem 0;
+  min-width: 106px;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,24 @@
+.login-bg {
+  height: 91vh;
+  background-image: url("../../assets/Resursi/loginBackground.jpg");
+  background-position: center -91px;
+  background-repeat: no-repeat;
+  background-size: 900px 115vh;
+  position: relative;
+}
+p {
+  text-align: center;
+  font-size: 13px;
+}
+p > a {
+  color: black;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+span {
+  font-size: 10px;
+  color: red;
+  position: absolute;
+}

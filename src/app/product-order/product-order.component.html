@@ -1,0 +1,150 @@
+<div class="container mt-1 text-center pb-5">
+  <div class="row justify-content-center">
+    <form
+      class="col-12 col-md-9 col-lg-7 col-xl-6"
+      [formGroup]="orderForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          name="firstName"
+          class="form-control form-control-sm shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          placeholder="First Name..."
+          formControlName="firstName"
+        />
+        <span
+          *ngIf="
+            !orderForm.controls['firstName'].valid &&
+            orderForm.controls['firstName'].touched
+          "
+          class="text-danger"
+          >First name must be filled.</span
+        >
+        <label class="asterisk">First Name:</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          name="lastName"
+          class="form-control form-control-sm shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          placeholder="Last Name..."
+          formControlName="lastName"
+        />
+        <span
+          *ngIf="
+            !orderForm.controls['lastName'].valid &&
+            orderForm.controls['lastName'].touched
+          "
+          class="text-danger"
+          >Last name must be filled.</span
+        >
+        <label class="asterisk">Last Name:</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          name="email"
+          class="form-control form-control-sm shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          placeholder="Email address..."
+          formControlName="email"
+        />
+        <span
+          *ngIf="
+            !orderForm.controls['email'].valid &&
+            orderForm.controls['email'].touched
+          "
+          class="text-danger"
+          >Email must be valid.</span
+        >
+        <label class="asterisk">Email address:</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="number"
+          name="phoneNumber"
+          class="form-control form-control-sm shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          placeholder="Phone number..."
+          formControlName="phoneNumber"
+        />
+        <span
+          *ngIf="
+            !orderForm.controls['phoneNumber'].valid &&
+            orderForm.controls['phoneNumber'].touched
+          "
+          class="text-danger"
+          >Phone number must be valid.</span
+        >
+        <label class="asterisk">Phone number:</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          name="address"
+          class="form-control form-control-sm shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          placeholder="Address..."
+          formControlName="address"
+        />
+        <span
+          *ngIf="
+            !orderForm.controls['address'].valid &&
+            orderForm.controls['address'].touched
+          "
+          class="text-danger"
+          >Address must be filled.</span
+        >
+        <label class="asterisk">Address:</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea
+          name="comment"
+          cols="30"
+          rows="10"
+          placeholder="Comment..."
+          class="form-control form-control-sm shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          formControlName="comment"
+        ></textarea>
+        <label>Comment:</label>
+      </div>
+
+      <div class="form-group mb-3 text-start">
+        <label class="asterisk" style="margin-left: 13px"
+          >Payment method:</label
+        >
+        <select
+          name="paymentMethod"
+          class="form-select shadow-none rounded-0 border border-top-0 border-end-0 border-start-0"
+          aria-label="Floating label select example"
+          formControlName="paymentMethod"
+        >
+          <option selected disabled value="choose">
+            --choose payment method--
+          </option>
+          <option value="creditcard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="ondelivery">Payment on Delivery</option>
+        </select>
+        <span
+          *ngIf="
+            !orderForm.controls['paymentMethod'].valid &&
+            orderForm.controls['paymentMethod'].touched
+          "
+          class="text-danger"
+          >You must choose a payment method.</span
+        >
+      </div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-dark rounded-0 w-25"
+        [disabled]="!orderForm.valid"
+      >
+        Confirm
+      </button>
+    </form>
+  </div>
+</div>

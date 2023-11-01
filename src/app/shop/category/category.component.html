@@ -1,0 +1,18 @@
+<section style="padding-bottom: 2em; margin-top: 1em">
+  <div class="row w-100 mx-auto text-center justify-content-center">
+    <div
+      class="col-4 mb-3"
+      style="width: 18em"
+      *ngFor="let product of products"
+      [routerLink]="['/product/', product.id]"
+    >
+      <img
+        [src]="product.photo"
+        alt="Img not loaded..."
+        style="width: 15em; height: 15em"
+      />
+      <p class="mb-0 fw-bold">{{ product.title }}</p>
+      <em>{{ product.price }}$</em>
+    </div>
+  </div>
+</section>

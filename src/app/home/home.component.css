@@ -1,0 +1,14 @@
+textarea {
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid rgb(182, 178, 178);
+  resize: none;
+}
+
+.flower-header {
+  width: 100%;
+  height: 30em;
+  text-align: right;
+  padding-top: 8.5em;
+  padding-right: 1.5em;
+}

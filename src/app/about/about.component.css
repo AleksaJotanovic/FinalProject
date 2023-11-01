@@ -1,0 +1,16 @@
+.flowerbanner {
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+  color: white;
+  background-image: url("../../assets/Resursi/MACRO_PLP_BANNER.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media all and (max-width: 280px) {
+  .flowerbanner {
+    height: 40em;
+  }
+}

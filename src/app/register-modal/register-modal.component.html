@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">
+    Thank You For Your Registering
+  </h5>
+</div>
+<div class="modal-body">
+  <p>We have sent a confirmation mail to your email.</p>
+  <p>
+    Please check your email and click on the link to verify your email address.
+  </p>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-sm btn-dark"
+    (click)="resendVerificationMail()"
+  >
+    Resend Verification Mail
+  </button>
+  <button
+    type="button"
+    class="btn btn-sm btn-dark"
+    routerLink="/login"
+    (click)="modalRef.close()"
+  >
+    Log In
+  </button>
+</div>

@@ -1,0 +1,55 @@
+<nav class="navbar sticky-top navbar-expand-sm bg-light navbar-light p-1">
+  <div class="container">
+    <button class="navbar-toggler" type="button" (click)="collapse.toggle()">
+      <i class="navbar-toggler-icon" style="font-size: 0.4cm"></i>
+    </button>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse navbar-collapse justify-content-center">
+      <img [src]="navbarLogoUrl" class="me-auto" style="width: 6em; height: 2em" />
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link fw-normal text-secondary" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-normal text-secondary" [routerLink]="['/about']">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-normal text-secondary" [routerLink]="['/shop']">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link fw-normal text-secondary">Contact</a>
+        </li>
+      </ul>
+
+      <div class="navend-icons">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="bi bi-person-circle"></i>
+            <i class="bi bi-caret-down-fill dropbtn"></i>
+          </button>
+          <div class="dropdown-content">
+            <div *ngIf="authService.isLoggedIn" style="display: flex; flex-direction: column">
+              <small style="padding: 5px 0 5px 0">{{ displayName }}</small>
+              <small (click)="logOut()" style="
+                  border-top: 1px solid grey;
+                  padding: 5px 0 5px 0;
+                  cursor: pointer;
+                ">Log Out</small>
+            </div>
+
+            <div *ngIf="!authService.isLoggedIn" style="display: flex; flex-direction: column">
+              <small>As Guest</small>
+              <small [routerLink]="['/login']" style="cursor: pointer">
+                Log In</small>
+            </div>
+          </div>
+        </div>
+        <div>
+          <i class="bi bi-cart-fill" [routerLink]="['/cart']"></i>
+          <span class="badge bg-secondary rounded-circle">{{
+            totalQuantity
+            }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

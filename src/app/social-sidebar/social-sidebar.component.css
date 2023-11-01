@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.icon-bar {
+  position: fixed;
+  top: 70%;
+  right: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  z-index: 30;
+}
+
+a {
+  text-decoration: none;
+  width: 210px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  transform: translateX(+9em);
+  -webkit-transform: translateX(+9em);
+  -ms-transform: translateX(+9em);
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+}

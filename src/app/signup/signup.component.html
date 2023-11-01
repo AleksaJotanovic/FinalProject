@@ -1,0 +1,43 @@
+<div class="login-bg">
+  <div class="container pt-5">
+    <div class="row justify-content-center">
+      <div class="text-center mb-3">
+        <h4>Sign Up</h4>
+      </div>
+      <form class="col-8 col-md-6 col-lg-4 col-xl-3 ps-4 pe-4"
+        (ngSubmit)="signUp(firstName.value, lastName.value, email.value, password.value)" #signupForm="ngForm">
+        <div>
+          <label class="form-label">First Name:</label>
+          <input class="form-control form-control-sm rounded-0 shadow-sm" type="text" ngModel name="firstName" required
+            minlength="5" #firstName="ngModel" #firstNameRef />
+          <span class="help-block" *ngIf="!firstName.valid && firstName.touched">First name is required</span>
+        </div>
+        <div class="mt-3">
+          <label class="form-label">Last Name:</label>
+          <input class="form-control form-control-sm rounded-0 shadow-sm" type="text" ngModel name="lastName" required
+            minlength="5" #lastName="ngModel" #lastNameRef />
+          <span class="help-block" *ngIf="!lastName.valid && lastName.touched">Last name is required</span>
+        </div>
+        <div class="mt-3">
+          <label class="form-label">Email:</label>
+          <input class="form-control form-control-sm rounded-0 shadow-sm" type="email" ngModel name="email" required
+            email #email="ngModel" #emailRef />
+          <span class="help-block" *ngIf="!email.valid && email.touched">Email is required.</span>
+        </div>
+        <div class="mt-3">
+          <label class="form-label">Password</label>
+          <input class="form-control form-control-sm rounded-0 shadow-sm" type="password" ngModel name="password"
+            required minlength="5" #password="ngModel" #passwordRef />
+          <span class="help-block" *ngIf="!password.valid && password.touched">Password is required</span>
+        </div>
+        <div class="mt-4">
+          <label class="form-label">Forgot password?</label>
+          <br />
+          <input class="btn btn-sm btn-light rounded-0 col-12" type="submit" value="Sign Up"
+            [disabled]="!signupForm.valid" />
+          <p>Already a member? <a [routerLink]="['/login']">Log In</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

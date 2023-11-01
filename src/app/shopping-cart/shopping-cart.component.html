@@ -1,0 +1,65 @@
+<div class="main" *ngIf="cart.length !== 0">
+  <div class="product-grid" *ngFor="let product of cart">
+    <div class="grid-1">
+      <img [src]="product.photo" />
+      <div style="margin-left: 5px">
+        <p>{{ product.title }}</p>
+        <button
+          type="button"
+          (click)="remove(product)"
+          style="border: 0; background: transparent"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="item-1">
+        <p>{{ product.price }}$</p>
+      </div>
+
+      <div class="item-2">
+        <span (click)="incrementQuantity(product)">+</span>
+        <input type="number" min="1" disabled [(ngModel)]="product.quantity" />
+        <span (click)="decrementQuantity(product)">-</span>
+      </div>
+
+      <div class="item-3">
+        <p>{{ product.quantity * product.price }}$</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex justify-content-end mt-1">
+    <div class="col-12 col-lg-6 position-relative">
+      <div class="m-0">
+        <p class="d-inline">Subtotal:</p>
+        <p class="d-inline position-absolute end-0">{{ subtotal }}$</p>
+      </div>
+      <div class="m-0 border-bottom">
+        <p class="d-inline">Shipping:</p>
+        <p class="d-inline position-absolute end-0">
+          {{ subtotal < 100 ? 100 : "FREE" }}$
+        </p>
+      </div>
+      <div class="m-0">
+        <p class="d-inline">Total:</p>
+        <p class="d-inline position-absolute end-0">
+          {{ subtotal < 100 ? subtotal + 100 : subtotal }}$
+        </p>
+      </div>
+      <div class="mb-5 pb-3">
+        <button
+          class="btn btn-dark rounded-1 position-absolute end-0"
+          (click)="checkout()"
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid text-center mt-3" *ngIf="this.cart.length === 0">
+  <h1>Shopping cart is empty!</h1>
+</div>

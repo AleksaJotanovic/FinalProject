@@ -1,0 +1,57 @@
+<div class="login-bg">
+  <div class="container pt-5">
+    <div class="row justify-content-center">
+      <div class="text-center mt-5">
+        <h3>Log In</h3>
+        <p>New to this site? <a [routerLink]="['/signup']">Sign Up</a></p>
+      </div>
+      <form
+        class="col-8 col-md-6 col-lg-4 col-xl-3"
+        (ngSubmit)="signIn(email.value, password.value)"
+        #loginForm="ngForm"
+      >
+        <div>
+          <label class="form-label">Email:</label>
+          <input
+            class="form-control form-control-sm rounded-0 shadow-sm"
+            type="email"
+            ngModel
+            name="email"
+            required
+            email
+            #email="ngModel"
+            #emailRef
+          />
+          <span class="help-block" *ngIf="!email.valid && email.touched"
+            >Email is required</span
+          >
+        </div>
+        <div class="pt-3">
+          <label class="form-label">Password:</label>
+          <input
+            class="form-control form-control-sm rounded-0 shadow-sm"
+            type="password"
+            ngModel
+            name="password"
+            required
+            minlength="5"
+            #password="ngModel"
+            #passwordRef
+          />
+          <span class="help-block" *ngIf="!password.valid && password.touched"
+            >Password is required.</span
+          >
+        </div>
+        <div class="mt-5">
+          <label class="form-label">Forgot password?</label>
+          <input
+            class="btn btn-sm btn-light rounded-0 col-12"
+            type="submit"
+            value="Log In"
+            [disabled]="!loginForm.valid"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

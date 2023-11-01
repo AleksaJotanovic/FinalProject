@@ -1,0 +1,179 @@
+<section
+  class="flower-header"
+  [ngStyle]="{ background: 'url(' + headerBackgroundUrl + ') center / cover' }"
+>
+  <h1>March into Spring!</h1>
+  <p>Bring the meadow to them with a daisy bouquet</p>
+  <button type="button" class="btn btn-secondary rounded-1">
+    SHOP FLOWERS
+  </button>
+</section>
+<section class="container-fluid">
+  <div class="container-fluid col-8">
+    <p class="mt-5">
+      Established in 1910, FTD has been a premier provider of beautiful floral
+      arrangements and gorgeous mixed flower bouquets for over 100 years.
+      Whatever the occasion, our evergreen collection of colorful stems,
+      blossoming plants, and fragrant arrangements have warmed hearts all across
+      the country with our flower delivery services. At FTD, we celebrate the
+      little things in life and cherish the timeless charm a single flower
+      embodies. From birthday flowers to sympathy flowers, all of our
+      hand-picked flower arrangements are worth more than a thousand words.
+    </p>
+    <br />
+    <p class="mb-5">
+      Our sprawling network of florists is chock-full of expert on thumbs with
+      an eye for elegance and perfection. As one of the largest and most trusted
+      online floral retailers in the world, we take immense pride in our
+      industry- leading title. Delivering quality, innovation, creative
+      artistry, and dependability, FTD is much more than just an online flower
+      delivery service.
+    </p>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower1.jpeg" />
+      <p>Fiesta Bouqet <br />$60</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower2.jpeg" />
+      <p>Alluring Elegance Bouqet <br />$72</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower3.jpeg" />
+      <p>Belle of the Ball Bouqet <br />$45</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower4.jpeg" />
+      <p>Rainbow Garden <br />$50</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower5.jpeg" />
+      <p>Beyond Blue Bouqet <br />$55</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower6.jpeg" />
+      <p>Mixed Roses <br />$35</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower7.jpeg" />
+      <p>Smiles and Sunshine <br />$45</p>
+    </div>
+    <div class="text-center col-sm-6 col-md-5 col-lg-3">
+      <img [style]="imgDimension" src="assets/Resursi/flower8.jpeg" />
+      <p>Best Day Bouqet <br />$61</p>
+    </div>
+  </div>
+  <div class="text-center mb-5">
+    <button
+      class="btn btn-outline-secondary rounded-1"
+      [routerLink]="['/shop']"
+    >
+      Load more
+    </button>
+  </div>
+
+  <!-- FORM -->
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <p>
+        Send us a message <br />
+        A: Laze Nancica 7, 21000 Novi Sad
+      </p>
+      <p>T: 021/422-022</p>
+      <p>office@smartinit.net</p>
+      <br />
+      <p>MONDAY: 7am - 10pm</p>
+      <p>SATURDAY: 8am - 10pm</p>
+      <p>SUNDAY:-</p>
+      <br />
+      <p>FAQ /</p>
+      <p>Shipping & Returns</p>
+      <p>Store Policy</p>
+      <p>Payment Methods/</p>
+    </div>
+    <div class="col-md-6">
+      <form class="row mt-5">
+        <div class="col-md-6">
+          <input
+            type="text"
+            class="form-control mb-3 shadow-none"
+            id="inputEmail4"
+            placeholder="Name"
+            style="border-radius: 0; border: 0; border-bottom: 1px solid"
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            type="email"
+            class="form-control mb-3 shadow-none"
+            id="inputPassword4"
+            placeholder="Email"
+            style="border-radius: 0; border: 0; border-bottom: 1px solid"
+          />
+        </div>
+        <div class="col-12">
+          <input
+            type="text"
+            class="form-control mb-3 shadow-none"
+            id="inputEmail4"
+            placeholder="Subject"
+            style="border-radius: 0; border: 0; border-bottom: 1px solid"
+          />
+        </div>
+        <div class="col-12">
+          <textarea
+            class="form-control mb-3 shadow-none"
+            rows="3"
+            placeholder="Message"
+            style="border-radius: 0; border: 0; border-bottom: 1px solid"
+          ></textarea>
+        </div>
+
+        <div class="col-12 text-center">
+          <button type="button" class="btn btn-outline-secondary rounded-1">
+            SEND
+          </button>
+        </div>
+      </form>
+
+      <p class="mt-5">Get our newletters</p>
+      <div class="input-group">
+        <input
+          style="border: 2px solid"
+          type="text"
+          class="form-control shadow-none rounded-0"
+          placeholder="Enter your email here"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-dark ms-3 rounded-1" type="button">
+            Subscribe Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid mt-5">
+  <div class="row">
+    <div
+      class="col-lg-6 col-md-6 text-center text-light"
+      style="background-color: pink; height: 21em; padding-top: 6em"
+    >
+      <h3>Send Get Well Wishes</h3>
+      <p style="font-size: smaller">
+        Brighten their recovery with beautifull florals, plants, and gifts that
+        will express your well wishes.
+      </p>
+      <button type="button" class="btn btn-secondary btn-sm fw-bold rounded-5">
+        SHOP GET WELL FLOWERS & GIFTS
+      </button>
+    </div>
+    <div
+      class="col-lg-6 col-md-6"
+      style="height: 21em"
+      [ngStyle]="{ background: 'url(' + flowerImageUrl + ') center / cover' }"
+    ></div>
+  </div>
+</section>
